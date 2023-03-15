@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 // -----+ Container +----------------------------------------------
@@ -22,6 +22,13 @@ body {
 .text {
   font-size: 16px;
   line-height: calc(24 / 16 * 100%);
+}
+
+// -----+ Title +----------------------------------------------
+.title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(38 / 26 * 100%);
 }
 
 // -----+ Header +----------------------------------------------
@@ -66,13 +73,13 @@ body {
     margin-right: 40px;
     font-weight: 500;
 
-    transition: text-shadow .2s linear;
+    transition: color .1s linear;
 
     &:last-child {
       margin: 0;
     }
     &:hover {
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      color:#FF6464;
     }
   }
 
@@ -159,3 +166,108 @@ body {
   }
 
 }
+
+// -----+ Posts +----------------------------------------------
+.posts {
+  background: #EDF7FA;
+		// .posts__header
+		&__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+		}
+
+		// .posts__title
+
+		&__title {
+      font-size: 22px;
+      line-height: calc(60 / 22 * 100%);
+		}
+
+		// .posts__link
+
+		&__link {
+      color: #00A8CC;
+      font-size: 16px;
+      line-height: calc(24 / 16 * 100%);
+
+      transition: color .1s linear;
+      &:hover {
+        color: #FF6464;
+      }
+		}
+
+		// .posts__row
+
+		&__row {
+      display: flex;
+      gap: 20px;
+		}
+
+    @media (max-width: 767.98px){
+      &__row {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 375px) {
+      &__header {
+        justify-content: center;
+      }
+      &__link {
+        display: none;
+      }
+      &__title {
+        font-size: 18px;
+      }
+    }
+}
+
+// -----+ Post +----------------------------------------------
+.post {
+  padding: 20px;
+  flex: 0 1 50%;
+  background: #fff;
+
+  // .post__title
+  &__title {
+    margin-bottom: 20px;
+    transition: text-shadow .1s linear;
+    &:hover{
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  // .post__date
+
+  &__date {
+    font-size: 18px;
+    line-height: calc(26 / 18 * 100%);
+
+    margin-bottom: 20px;
+    span {
+      margin: 0 25px;
+    }
+  }
+
+  // .post__text
+  &__text {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 767.98px) {
+    & {
+      flex: 1 1 100%;
+    }
+  }
+
+  @media (max-width: 375px) {
+    &__title {
+      font-size: 22px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+}
+
