@@ -221,6 +221,9 @@ hr {
   }
 }
 
+.works {
+  margin-bottom: 100px;
+}
 .works__header {
   margin: 15px 0;
 }
@@ -256,7 +259,7 @@ hr {
   font-size: 18px;
   line-height: 333.3333333333%;
   color: #fff;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 @media (max-width: 625px) {
   .works__row {
@@ -281,4 +284,23 @@ hr {
   .works__date span {
     padding: 0 12px;
   }
+  .works {
+    margin-bottom: 50px;
+  }
+}
+
+.footer {
+  text-align: center;
+  height: 100%;
+  max-height: 182px;
+  padding: 55px 0;
+}
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 240px;
+}
+.footer__text {
+  margin-top: 25px;
 }/*# sourceMappingURL=style.css.map */
